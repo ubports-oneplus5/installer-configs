@@ -1,19 +1,24 @@
 {
-  "name": "VollaPhone",
-  "codename": "yggdrasil",
-  "unlock": [],
+  "name": "OnePlus 5",
+  "codename": "cheeseburger",
+  "unlock": ["unlock"],
   "user_actions": {
     "recovery": {
       "title": "Reboot to Recovery",
-      "description": "With the device powered off, hold Volume Down + Power. You might be prompted to select a mode to boot into. If that happens, follow the on-screen instructions and select \"Recovery\" mode.",
+      "description": "With the device powered off, hold Volume Down + Power.",
       "image": "phone_power_down",
       "button": true
     },
     "bootloader": {
       "title": "Reboot to Bootloader",
-      "description": "With the device powered off, hold Volume Up + Power. You might be prompted to select a mode to boot into. If that happens, follow the on-screen instructions and select \"Fastboot\" mode.",
+      "description": "With the device powered off, hold Volume Up + Power.",
       "image": "phone_power_up",
       "button": true
+    },
+    "unlock": {
+      "title": "Unlock",
+      "description": "For the Installer to work, your device needs to be in an unlocked state. Click the link below to find out more about the process. If the device is already running Ubuntu Touch or has been unlocked, you can simply ignore this message.",
+      "link": "https://oneplus.gadgethacks.com/how-to/unlock-bootloader-your-oneplus-5-5t-install-twrp-recovery-0178483/"
     }
   },
   "operating_systems": [
@@ -51,8 +56,8 @@
           "group": "firmware",
           "files": [
             {
-              "url": "https://cdimage.ubports.com/devices/halium-unlocked-recovery_yggdrasil.img",
-              "checksum": "bf32cb85ba58d1f0791b37a91e44697c647440fd365a9f28ab77d9616fd36b2c"
+              "url": "https://dl.twrp.me/cheeseburger_dumpling/twrp-3.4.0-0-cheeseburger_dumpling.img",
+              "checksum": "3a5033653621a9acd7e7b07c7307d5b5eecef165569fded7a0a64e676a9f9c8b"
             }
           ]
         },
@@ -68,12 +73,12 @@
           "flash": [
             {
               "partition": "boot",
-              "file": "halium-unlocked-recovery_yggdrasil.img",
+              "file": "twrp-3.4.0-0-cheeseburger_dumpling.img",
               "group": "firmware"
             },
             {
               "partition": "recovery",
-              "file": "halium-unlocked-recovery_yggdrasil.img",
+              "file": "twrp-3.4.0-0-cheeseburger_dumpling.img",
               "group": "firmware"
             }
           ]
